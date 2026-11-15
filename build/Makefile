@@ -129,6 +129,30 @@ app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
+src/calculator.o: src/calculator.cpp.o
+.PHONY : src/calculator.o
+
+# target to build an object file
+src/calculator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/calculator.cpp.o
+.PHONY : src/calculator.cpp.o
+
+src/calculator.i: src/calculator.cpp.i
+.PHONY : src/calculator.i
+
+# target to preprocess a source file
+src/calculator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/calculator.cpp.i
+.PHONY : src/calculator.cpp.i
+
+src/calculator.s: src/calculator.cpp.s
+.PHONY : src/calculator.s
+
+# target to generate assembly for a file
+src/calculator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/calculator.cpp.s
+.PHONY : src/calculator.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... app"
+	@echo "... src/calculator.o"
+	@echo "... src/calculator.i"
+	@echo "... src/calculator.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
